@@ -1,62 +1,193 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("C:/Users/Albina/Desktop/ChicagoB11cucumberjunit/src/test/resources/features/test.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("C:/Users/Albina/Desktop/ChicagoB11cucumberjunit/src/test/resources/features/google.feature");
 formatter.feature({
-  "name": "Amazon title verification",
-  "description": "",
+  "name": "google title verification",
+  "description": "User Story: US44",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@smoke"
+      "name": "@back"
     }
   ]
 });
-formatter.scenario({
-  "name": "Amazon title verification",
+formatter.background({
+  "name": "Login to Google",
   "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@smoke"
-    },
-    {
-      "name": "@amazon1"
-    }
-  ]
+  "keyword": "Background"
 });
 formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "User is on Amazon application",
+  "name": "User is on Google search page",
   "keyword": "When "
 });
 formatter.match({
-  "location": "Amazon_Steps.user_is_on_Amazon_application()"
+  "location": "Google_Steps.user_is_on_Google_search_page()"
 });
 formatter.result({
   "status": "passed"
 });
+formatter.scenario({
+  "name": "google search verification",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@back"
+    },
+    {
+      "name": "@google"
+    }
+  ]
+});
 formatter.step({
-  "name": "User should see Amazon in title",
-  "keyword": "Then "
+  "name": "User is on Google search page",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "Amazon_Steps.user_should_see_Amazon_in_title()"
+  "location": "Google_Steps.user_is_on_Google_search_page()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "User searches for something",
+  "name": "User searches for apples",
   "keyword": "And "
 });
 formatter.match({
-  "location": "Amazon_Steps.user_searches_for_something()"
+  "location": "Google_Steps.user_searches_for_apples()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.fail(Assert.java:95)\r\n\tat steps.Amazon_Steps.user_searches_for_something(Amazon_Steps.java:29)\r\n\tat ✽.User searches for something(C:/Users/Albina/Desktop/ChicagoB11cucumberjunit/src/test/resources/features/test.feature:8)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png");
+formatter.step({
+  "name": "User should see inside of the title",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Google_Steps.user_should_see_inside_of_the_title()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Login to Google",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User is on Google search page",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "Google_Steps.user_is_on_Google_search_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Google title verification with preferred data",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@back"
+    },
+    {
+      "name": "@new"
+    }
+  ]
+});
+formatter.step({
+  "name": "User is on Google search page",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "Google_Steps.user_is_on_Google_search_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User searches for the word \"iphone\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "Google_Steps.user_searches_for_the_word(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User should see the word \"iphone\" inside of the title",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Google_Steps.user_should_see_the_word_inside_of_the_title(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "Login to Google",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User is on Google search page",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "Google_Steps.user_is_on_Google_search_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Google Title Test",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@back"
+    },
+    {
+      "name": "@dataType"
+    }
+  ]
+});
+formatter.step({
+  "name": "User tests with words \"apple\" \"pen\" \"paper\"",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "Google_Steps.user_tests_with_words(String,String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "User checks numbers 12 and 55",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "Google_Steps.user_checks_numbers_and(Integer,Integer)"
+});
+formatter.result({
+  "status": "passed"
+});
 formatter.after({
   "status": "passed"
 });
